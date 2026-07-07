@@ -25,8 +25,7 @@ const HEADING_HOLD_MS = 3200; // how long each heading stays before switching
 
 export default function AboutSection() {
   const [headingIndex, setHeadingIndex] = useState(0);
-  const videoRef = useRef(null);
-
+  const videoRef = useRef<HTMLVideoElement | null>(null);
   useEffect(() => {
     const interval = setInterval(() => {
       setHeadingIndex((prev) => (prev + 1) % HEADINGS.length);
